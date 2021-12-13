@@ -1,0 +1,483 @@
+<?php
+  session_start();
+  $_SESSION['offset'] = 0;
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About Page</title>
+<!--
+Next Level CSS Template
+https://templatemo.com/tm-532-next-level
+-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-style.css" />
+    <link rel="stylesheet" href="css/mojecolory.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row tm-brand-row">
+        <div class="col-lg-4 col-10">
+          <div class="tm-brand-container">
+            <div class="tm-brand-texts">
+              <h1 class="text-uppercase tm-brand-name">zemby</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-2 tm-nav-col">
+          <div class="tm-nav">
+            <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto mr-0">
+                  <li class="nav-item">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item active">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="services.html">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="profile.html">Profile</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+     
+
+      <!-- zdjęcia dentystów -->
+      <section class="row tm-pt-4 tm-pb-6">
+        <div class="col-12 tm-tabs-container tm-page-cols-container">
+          <div class="tm-page-col-left tm-tab-links">
+            <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+              <li>
+                <a href="#tab1" class="active">
+                  <div class="tm-tab-icon"></div>
+                  Wszyscy specjaliści
+                </a>
+              </li>
+              <li>
+                <a href="#tab2" class="">
+                  <div class="tm-tab-icon"></div>
+                  Chirurgia stomatologiczna
+                </a>
+              </li>
+              <li>
+                <a href="#tab3" class="">
+                  <div class="tm-tab-icon"></div>
+                  Endodoncja
+                </a>
+              </li>
+              <li>
+                <a href="#tab4" class="">
+                  <div class="tm-tab-icon"></div>
+                  Stomatologia dziecięca
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="tm-page-col-right tm-tab-contents">
+            <div id="first-tab-group" class="tabgroup">
+              <!-- wszyscy lekarze -->
+              <div id="tab1">
+                <div class="text-content">
+                  <h3 class="tm-text-secondary tm-mb-5">
+                    Nasz zespół
+                  </h3>
+                  <p class="tm-mb-5">
+                    Jest to dróżyna dobrze wyszkolonych lekarzy, którzy poświęcili całe swoje życie na rozwój swoich umiejętności oraz samodoskonalenie. Każdy z nich jest pełnym pasji, kochającym swoją pracę specjalistą, którzy dopilnują aby byli Państwo zadowoleni z usług naszej kliniki.
+                  </p>
+                </div>
+                <div class="row tm-pt-5">
+                  <!-- pierwszy lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist.html">
+                        <img
+                          src="img/dentysta1.jpg"
+                          alt="Image"
+                          class="img-fluid tm-mb-1"
+                        />
+                        <h4 class="tm-text-secondary tm-mb-1">
+                          Adrian Picuś
+                        </h4>
+                      </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> Endodoncja, Stomatologia dziecięca.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- drugi lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist2.html">
+                        <img
+                          src="img/dentysta2.jpg"
+                          alt="Image"
+                          class="img-fluid tm-mb-1"
+                        />
+                        <h4 class="tm-text-secondary tm-mb-1">Gniewosz Szaran</h4>
+                      </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> Chirurgia stomatologiczna.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- trzeci lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist3.html">
+                        <img
+                          src="img/dentysta3.jpg"
+                          alt="Image"
+                          class="img-fluid tm-mb-1"
+                        />
+                        <h4 class="tm-text-secondary tm-mb-1">Aleksandra Rogucka</h4>
+                      </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> Stomatologia dziecięca.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row tm-pt-5">
+                  <!-- czwarty lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist4.html">
+                      <img
+                        src="img/dentysta4.jpg"
+                        alt="Image"
+                        class="img-fluid tm-mb-1"
+                      />
+                      <h4 class="tm-text-secondary tm-mb-1">
+                        Michalina Dobrodziejska
+                      </h4>
+                    </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> Chirurgia stomatologiczna, Stomatologia dziecięca, Endodoncja.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- piąty lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist5.html">
+                      <img
+                        src="img/dentysta5.jpg"
+                        alt="Image"
+                        class="img-fluid tm-mb-1"
+                       />
+                        <h4 class="tm-text-secondary tm-mb-1">Monika Pucybut</h4>
+                      </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> Endodoncja.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- szósty lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist6.html">
+                        <img
+                          src="img/dentysta6.jpg"
+                          alt="Image"
+                          class="img-fluid tm-mb-1"
+                        />
+                        <h4 class="tm-text-secondary tm-mb-1">Patryk Magutki</h4>
+                      </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> Stomatologia dziecięca, Chirurgia stomatologiczna.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- chirurgia stomatologiczna -->
+              <div id="tab2">
+                <div class="text-content">
+                  <h3 class="tm-text-secondary tm-mb-5">
+                    Czym zajmuje się chirurg stomatolog?
+                  </h3>
+                  <p class="tm-mb-5">
+                    Chirurgia stomatologiczna zajmuje się jednak nie tylko zębami i związanymi z nimi problemami – w zakres jej zainteresowań wchodzi cała jama ustna, a nawet więcej. Wśród najczęstszych procedur medycznych charakterystycznych dla tej specjalności znajduje się szereg zabiegów związanych z usuwaniem różnego rodzaju nowotworów, a także czynności wstępne dla protetyki i implantowania. Chirurg stomatologiczny pomoże nam także w przypadku dolegliwości bólowych oraz nieprawidłowości w obrębie połączeń kości i mięśni twarzoczaszki, również w zakresie rehabilitacji po doznanym urazie.
+                  </p>
+                </div>
+                <div class="row tm-pt-5">
+                  <!-- pierwszy lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist2.html">
+                        <img
+                          src="img/dentysta2.jpg"
+                          alt="Image"
+                          class="img-fluid tm-mb-1"
+                        />
+                        <h4 class="tm-text-secondary tm-mb-1">Gniewosz Szaran</h4>
+                      </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> <b>Chirurgia stomatologiczna</b>.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- drugi lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist4.html">
+                      <img
+                        src="img/dentysta4.jpg"
+                        alt="Image"
+                        class="img-fluid tm-mb-1"
+                      />
+                      <h4 class="tm-text-secondary tm-mb-1">
+                        Michalina Dobrodziejska
+                      </h4>
+                    </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> <b>Chirurgia stomatologiczna</b>, Stomatologia dziecięca, Endodoncja.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- trzeci lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist6.html">
+                        <img
+                          src="img/dentysta6.jpg"
+                          alt="Image"
+                          class="img-fluid tm-mb-1"
+                        />
+                        <h4 class="tm-text-secondary tm-mb-1">Patryk Magutki</h4>
+                      </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> Stomatologia dziecięca, <b>Chirurgia stomatologiczna</b>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- endodoncja -->
+              <div id="tab3">
+                <div class="text-content">
+                  <h3 class="tm-text-secondary tm-mb-5">
+                    Czym jest endodoncja?
+                  </h3>
+                  <p class="tm-mb-5">
+                    Leczenie endodontyczne, potocznie nazywane leczeniem kanałowym, jest to zabieg polegający na ekstyrpacji miazgi, czyli usunięcia jej z kanałów korzeniowych zęba. Miazga jest galaretowatą substancją zawierającą naczynia krwionośne i limfatyczne, komórki oraz nerwy. Następnie pusty już kanał zęba jest opracowywany specjalnymi pilnikami endontycznymi oraz obficie płukany płynami do irygacji kanałów korzeniowych, których zadaniem jest usunięcie resztek zębiny, bakterii itd. Na samym końcu, tak opracowany mechanicznie i chemicznie kanał, jest wypełniany materiałami do tego przeznaczonymi. Leczenie to jest skomplikowane i obarczone ryzykiem niepowodzenia, dlatego też wiążą się z nim liczne kontrowersyjne poglądy.
+                  </p>
+                </div>
+                <div class="row tm-pt-5">
+                  <!-- pierwszy lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist.html">
+                        <img
+                          src="img/dentysta1.jpg"
+                          alt="Image"
+                          class="img-fluid tm-mb-1"
+                        />
+                        <h4 class="tm-text-secondary tm-mb-1">
+                          Adrian Picuś
+                        </h4>
+                      </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> <b>Endodoncja</b>, Stomatologia dziecięca.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- drugi lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist4.html">
+                      <img
+                        src="img/dentysta4.jpg"
+                        alt="Image"
+                        class="img-fluid tm-mb-1"
+                      />
+                      <h4 class="tm-text-secondary tm-mb-1">
+                        Michalina Dobrodziejska
+                      </h4>
+                    </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> Chirurgia stomatologiczna, Stomatologia dziecięca, <b>Endodoncja</b>.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- trzeci lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist5.html">
+                      <img
+                        src="img/dentysta5.jpg"
+                        alt="Image"
+                        class="img-fluid tm-mb-1"
+                       />
+                        <h4 class="tm-text-secondary tm-mb-1">Monika Pucybut</h4>
+                      </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> <b>Endodoncja</b>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- stomatologia dziecięca -->
+              <div id="tab4">
+                <div class="text-content">
+                  <h3 class="tm-text-secondary tm-mb-5">
+                    Czym zajmuje się chirurg stomatolog?
+                  </h3>
+                  <p class="tm-mb-5">
+                    Stomatologia dziecięca to specjalizacja stomatologiczna wyodrębniona z powodu odrębności budowy zębów i całego układu stomatognatycznego w okresie rozwojowym.
+                  </p>
+                </div>
+                <div class="row tm-pt-5">
+                  <!-- pierwszy lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist.html">
+                        <img
+                          src="img/dentysta1.jpg"
+                          alt="Image"
+                          class="img-fluid tm-mb-1"
+                        />
+                        <h4 class="tm-text-secondary tm-mb-1">
+                          Adrian Picuś
+                        </h4>
+                      </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> Endodoncja, <b>Stomatologia dziecięca</b>.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- drugi lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist3.html">
+                        <img
+                          src="img/dentysta3.jpg"
+                          alt="Image"
+                          class="img-fluid tm-mb-1"
+                        />
+                        <h4 class="tm-text-secondary tm-mb-1">Aleksandra Rogucka</h4>
+                      </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> <b>Stomatologia dziecięca</b>.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- trzeci lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist4.html">
+                      <img
+                        src="img/dentysta4.jpg"
+                        alt="Image"
+                        class="img-fluid tm-mb-1"
+                      />
+                      <h4 class="tm-text-secondary tm-mb-1">
+                        Michalina Dobrodziejska
+                      </h4>
+                    </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> Chirurgia stomatologiczna, <b>Stomatologia dziecięca</b>, Endodoncja.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row tm-pt-5">
+                  <!-- czwarty lekarz -->
+                  <div class="col-md-4 text-center">
+                    <div class="tm-about-person mx-auto">
+                      <a href="team/dentist6.html">
+                        <img
+                          src="img/dentysta6.jpg"
+                          alt="Image"
+                          class="img-fluid tm-mb-1"
+                        />
+                        <h4 class="tm-text-secondary tm-mb-1">Patryk Magutki</h4>
+                      </a>
+                      <p>
+                        <span class="tm-text-secondary"><b>Specjalizacja:</b></span> <b>Stomatologia dziecięca</b>, Chirurgia stomatologiczna.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Page footer -->
+      <footer class="row tm-page-footer">
+        <p class="col-12 tm-copyright-text mb-0">
+          Copyright &copy; 2021 Designed by Zemby sp. z o.o.
+        </p>
+      </footer>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        // Tabs
+        $(".tabgroup > div").hide();
+        $(".tabgroup > div:first-of-type").show();
+        $(".tabs a").click(function(e) {
+          e.preventDefault();
+          var $this = $(this),
+            tabgroup = "#" + $this.parents(".tabs").data("tabgroup"),
+            others = $this
+              .closest("li")
+              .siblings()
+              .children("a"),
+            target = $this.attr("href");
+          others.removeClass("active");
+          $this.addClass("active");
+          $(tabgroup)
+            .children("div")
+            .hide();
+          $(target).show();
+
+          // Scroll to tab content (for mobile)
+          if ($(window).width() < 992) {
+            $("html, body").animate(
+              {
+                scrollTop: $("#first-tab-group").offset().top
+              },
+              200
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

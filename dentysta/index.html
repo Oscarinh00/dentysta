@@ -1,0 +1,207 @@
+<?php 
+    session_start();
+    if (empty($_SESSION['user'])): 
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Log in</title>
+<!--
+Next Level CSS Template
+https://templatemo.com/tm-532-next-level
+-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-style.css" />
+    <link rel="stylesheet" href="css/mojecolory.css" />
+    <link rel="stylesheet" href="css/logowanie.css" />
+  </head>
+  <body>
+    <div class="wrapper tm-mb-3">
+      <h1 class="text-uppercase tm-brand-name">zemby</h1>
+    </div>
+    <div class="wrapper">
+        <div id="formContent">
+          <h2 class="tm-text-secondary mb-4">Logowanie </h2>
+          <!-- Login Form -->
+          <form action="php/login.php" method="post">
+            <input type="text" id="login" class="form-control rounded-0 tm-mb-2 input-login-form" name="login" placeholder="Login" required>
+            <input type="password" id="password" class="form-control rounded-0 tm-mb-2 input-login-form" name="password" placeholder="Password" required>
+            <p><button type="submit" class="btn btn-secondary tm-btn-submit rounded-0" id="login">log in</button></p>
+            <p class="no-account-text">Nie masz konta? Wejdź na stronę bez logowania! <a class="no-account-link" href="php/login.php?noAccount=true">Kliknij tutaj</a></p>
+          </form>
+        </div>
+    </div>
+    <!-- Page footer -->
+    <footer class="row tm-page-footer">
+      <p class="col-12 tm-copyright-text tm-mb-3 tm-pt-7">
+        Copyright &copy; 2021 Designed by Zemby sp. z o.o.
+      </p>
+    </footer>
+
+    <div class="login-background"></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).on("change", ":file", function() {
+        var input = $(this),
+          numFiles = input.get(0).files ? input.get(0).files.length : 1,
+          label = input
+            .val()
+            .replace(/\\/g, "/")
+            .replace(/.*\//, "");
+        input.trigger("fileselect", [numFiles, label]);
+      });
+
+      $(document).ready(function() {
+        $(":file").on("fileselect", function(event, numFiles, label) {
+          $("#file_name_label").attr("placeholder", label);
+        });
+      });
+    </script>
+  </body>
+
+ <?php
+        else : 
+     ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Welcome</title>
+<!--
+Next Level CSS Template
+https://templatemo.com/tm-532-next-level
+-->
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-style.css" />
+    <link rel="stylesheet" href="css/mojecolory.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row tm-brand-row">
+        <div class="col-lg-4 col-10">
+          <div class="tm-brand-container">
+            <div class="tm-brand-texts">
+              <h1 class="text-uppercase tm-brand-name">zemby</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-2 tm-nav-col">
+          <div class="tm-nav">
+            <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto mr-0">
+                  <li class="nav-item active">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="services.html">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="profile.html">Profile</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="tm-welcome-box tm-bg-primary">
+        <p class="tm-welcome-text">
+          <em>Żeby zdrowe zęby mieć trzeba zdrowo jeść</em>
+        </p>
+      </div>
+
+      
+        <div class="tm-page-cols-container tm-pt-7">
+          <div class="tm-page-col-mid">
+            <p class="tm-mb-6">
+              Wizyty u dentysty nikomu nie kojarzą się z relaksem i przyjemnością. Mimo to pacjenci są coraz bardziej świadomi znaczenia zdrowia jamy ustnej dla ogólnej kondycji ich organizmu. Z tego względu branża stomatologiczna niezwykle dynamicznie się rozwija, a zmieniający się rynek stawia przed właścicielami gabinetów i klinik dentystycznych coraz to nowe wyzwania, którym należy sprostać. Nasz gabinet jest gotowy na każde nowe wyzwanie. Jesteśmy w stanie zapewnić dogodne leczenie.
+            </p>
+            <p class="mb-0">
+              Naturalną rzeczą jest to, że pacjenci chcący uzyskać leczenie u doświadczonego i uznanego stomatologa będą sprawdzać kilka ofert różnych gabinetów. Możemy ukrucić ten męczący proces szukania zaufanego stomatologa. Nasz gabinet spełnia wszystkie wymogi jakie stawia nam pacjent, mamy doświadczonych i zaufanych stomatologów. Nasi lekarze cieszą się świetnymi opiniami. Zapraszamy do naszego gabinetu. Tutaj dostaną Państwo niezrównaną opiekę. 
+              Równie ważną sprawą jest czystość naszego gabinetu i higiena pracy. Jesteśmy w stanie zagwarantować oba wymogi. Każdy pracownik jest zobowiązany do odpowiedzialnego czyszczenia i przechowywania  swoich narzędzi oraz sprzętu, więc nie muszą się Państwo obawiać.  
+              W recepcji pacjenci są w stanie w szybki sposób zarejestrować się na wizytę bez większych problemów. W większości innych gabinetów istnieje problem z oczekiwaniem na przyjęcie przez lekarza oraz ogromne kolejki,  ale nie u nas! Godziny przyjęć są dostosowane do tępa pracy stomatologów oraz ilości pacjentów.
+            </p>
+          </div>
+        </div>
+        
+        <div class="tm-page-col-mid">
+          <div class="row tm-pt-7 tm-pb-6">
+            <div class="col-md-6 tm-home-section-2-left">
+              <div
+                class="img-fluid tm-mb-4 tm-small-parallax"
+                data-parallax="scroll"
+                data-image-src="img/dentysta3b.jpg"></div>
+              <div>
+                <h3 class="tm-text-secondary tm-mb-4">
+                  Nasze początki
+                </h3>
+                <p class="tm-mb-5">
+                  Nasza klinika została otworzona w 1989 roku. Przez te lata wyrobiliśmy sobie miano lidera wśród gabinetów stomatologicznych. Już tysiące zadowolonych klientów przekroczyło nasze progi. Nasi specjaliści będą bardziej niż chętni aby wyleczyć Państwa dolegliwość.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 tm-home-section-2-right">
+              <div
+                class="img-fluid tm-mb-4 tm-small-parallax"
+                data-parallax="scroll"
+                data-image-src="img/image-2.jpg"></div>
+              <div>
+                <h3 class="tm-text-secondary tm-mb-4">
+                  Wyposarzenie
+                </h3>
+                <p class="tm-section-2-text">
+                  Każda sala jest wyremontowana i wyposarzona w najnowszy sprzęt, jaki jest wymagany do wykonywania zabiegów, jakie są wykonywane w naszej klinice
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- row -->
+
+     
+      <!-- Page footer -->
+      <footer class="row tm-page-footer">
+        <p class="col-12 tm-copyright-text mb-0">
+          Copyright &copy; 2021 Designed by Zemby sp. z o.o.
+        </p>
+      </footer>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+  <?php
+    endif; 
+  ?>
+</html>
